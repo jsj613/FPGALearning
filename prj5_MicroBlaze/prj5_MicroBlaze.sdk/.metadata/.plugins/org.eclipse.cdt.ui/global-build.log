@@ -1,0 +1,683 @@
+09:49:20 **** Build of project app4prj5_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_6/src"
+make -C microblaze_0/libsrc/standalone_v6_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_6/src"
+make -C microblaze_0/libsrc/standalone_v6_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+09:49:34 **** Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+09:53:11 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:05:19 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:05:30 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:10: error: 'i' undeclared (first use in this function)
+     for (i=0;i<5;i++){
+          ^
+../src/helloworld.c:56:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+10:05:33 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:10: error: 'i' undeclared (first use in this function)
+     for (i=0;i<5;i++){
+          ^
+../src/helloworld.c:56:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+10:06:04 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:10: error: 'i' undeclared (first use in this function)
+     for (i=0;i<5;i++){
+          ^
+../src/helloworld.c:56:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+10:06:16 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:10: error: 'i' undeclared (first use in this function)
+     for (i=0;i<5;i++){
+          ^
+../src/helloworld.c:56:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+10:07:44 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2756	    268	   3112	   6136	   17f8	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:07:47 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:08:04 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:08:33 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: error: too many arguments to function 'print'
+      print("Hello World %d \n\r",i );
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:10:40 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: error: too many arguments to function 'print'
+      print("Hello World ",i,"\n\r" );
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:11:49 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+      print(i );
+            ^
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2792	    268	   3108	   6168	   1818	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:12:08 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+      print(i);
+            ^
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2792	    268	   3108	   6168	   1818	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:12:11 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:12:19 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:13:11 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:13:13 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:14:53 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:15:30 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:16:10 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31256 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:16:21 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31264 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:16:24 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31264 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:18:07 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31264 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:18:41 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31264 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:19:30 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d/n",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:19:45 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d/n",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:20:08 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:18: error: 'n' undeclared (first use in this function)
+      printf("%d"/n,i);
+                  ^
+../src/helloworld.c:59:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+10:20:10 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:18: error: 'n' undeclared (first use in this function)
+      printf("%d"/n,i);
+                  ^
+../src/helloworld.c:59:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+10:20:20 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31360 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:20:22 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31360 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:21:36 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31360 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:21:56 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: app4prj5.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2018.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31360 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:22:56 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: error: too many arguments to function 'print'
+      print("%d/n",i);
+      ^~~~~
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:23:04 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2748	    268	   3112	   6128	   17f0	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:25:11 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:6: warning: parameter names (without types) in function declaration
+      int _print(i);
+      ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2772	    268	   3112	   6152	   1808	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:25:19 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:25:41 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+      print(i);
+            ^
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2792	    268	   3108	   6168	   1818	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:26:12 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: implicit declaration of function 'strin'; did you mean 'stdin'? [-Wimplicit-function-declaration]
+      print(strin(i));
+            ^~~~~
+            stdin
+../src/helloworld.c:59:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+H:\workSpace\xilinx\D7C\prj5_MicroBlaze\prj5_MicroBlaze.sdk\app4prj5\Debug/../src/helloworld.c:59: undefined reference to `strin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:26:18 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: implicit declaration of function 'string'; did you mean 'stdin'? [-Wimplicit-function-declaration]
+      print(string(i));
+            ^~~~~~
+            stdin
+../src/helloworld.c:59:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+H:\workSpace\xilinx\D7C\prj5_MicroBlaze\prj5_MicroBlaze.sdk\app4prj5\Debug/../src/helloworld.c:59: undefined reference to `string'
+collect2.exe: error: ld returned 1 exit status
+make: *** [app4prj5.elf] ´íÎó 1
+10:27:41 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+      print(itoa(i));
+            ^~~~
+../src/helloworld.c:59:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4057	    268	   3115	   7440	   1d10	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:27:49 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:27:55 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:29:45 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:30:36 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:35:18 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:12: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+      print(itoa(i));
+            ^~~~
+../src/helloworld.c:60:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7052	    272	   3108	  10432	   28c0	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:36:05 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:12: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+      print(itoa(i));
+            ^~~~
+../src/helloworld.c:60:12: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+In file included from d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+d:\xilinx\sdk\2018.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4057	    268	   3115	   7440	   1d10	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:36:26 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:37:28 **** Auto Build of configuration Debug for project app4prj5 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app4prj5_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app4prj5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app4prj5_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app4prj5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app4prj5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app4prj5.elf  |tee "app4prj5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6128	    272	   3104	   9504	   2520	app4prj5.elf
+'Finished building: app4prj5.elf.size'
+' '
+10:37:48 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:43:21 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.
+10:43:49 **** Incremental Build of configuration Debug for project app4prj5 ****
+make all 
+make: Nothing to be done for `all'.

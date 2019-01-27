@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jan 20 09:14:44 2019
+# Process ID: 5076
+# Current directory: H:/workSpace/xilinx/D7C/prj5_MicroBlaze/prj5_MicroBlaze.runs/design_1_ilmb_v10_0_synth_1
+# Command line: vivado.exe -log design_1_ilmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_ilmb_v10_0.tcl
+# Log file: H:/workSpace/xilinx/D7C/prj5_MicroBlaze/prj5_MicroBlaze.runs/design_1_ilmb_v10_0_synth_1/design_1_ilmb_v10_0.vds
+# Journal file: H:/workSpace/xilinx/D7C/prj5_MicroBlaze/prj5_MicroBlaze.runs/design_1_ilmb_v10_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_ilmb_v10_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 307.410 ; gain = 69.363
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_ilmb_v10_0, cache-ID = f61b3896eed10adf.
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 20 09:15:27 2019...
